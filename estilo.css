@@ -17,6 +17,22 @@ body
   background: linear-gradient(to right, #4b79a1, #283e51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
+
+.cabecalho__menu__lista
+{
+margin:10;
+padding:10;
+list-style: none;
+text-decoration: none;
+display: flex;
+flex-direction: row;
+justify-content:flex-end;
+gap:30px;
+
+
+
+
+}
 .apresentacao 
 {
     margin: 5%;
@@ -33,7 +49,7 @@ body
 .apresentacao__conteudo__titulo 
 {
  font-family: "ubuntu", sans-serif;
- font-weight: 400;
+ font-weight: 300;
  font-style: normal;
  line-height:1;
  font-size:42px;
