@@ -5,18 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portifolio</title>
         <link rel="stylesheet" href="estilo.css">
-   
+         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
-    <body>
+    <body>    
+            <!-- Pagina inicial -->
         <header class="cabecalho">
             <nav class="cabecalho__menu">
                 <p class="nome__site"><sTRong>MATHEUS <span class="txt__neon">LOPES</span> </sTRong></p>
                 <ul class="cabecalho__menu__lista">
                     <li class="cabecalho__menu__item"><a href="#Home">Inicio</a></li>
-                    <li class="cabecalho__menu__item"><a href="#About">Sobre</a></li>
+                    <li class="cabecalho__menu__item"><a href="sobre.html">Sobre</a></li>
                     <li class="cabecalho__menu__item"><a href="#Project">Projetos</a></li>
                     <li class="cabecalho__menu__item"><a href="#Contacts ">Contato</a></li>
                 </ul>
+               
             </nav>
         </header> 
         <main class="apresentacao">
@@ -26,15 +28,43 @@
               <P class="apresentacao__conteudo__texto">Tenho foco em transformar ideias e designs em 
                 experiências digitais modernas, intuitivas e responsivas. Utilizo HTML, CSS e JavaScript 
                 para dar vida a projetos únicos e funcionais. </P>
-                <div class="social midia"> 
-                  <a href="#"><i class='bxl  bx-linkedin'  > </a>
-
-                </div>
-              <a href="https://www.linkedin.com/in/matheus-lopes-875777253/">LinkeIn </a> 
-              <a href="https://github.com/Matheuslpss">GitHub </a>
+            <div class="social__midia"> 
+              <a target= "_blank" href="https://www.linkedin.com/in/matheus-lopes-875777253/"> <i class='bx bxl-linkedin'></i></a> 
+              <a target="_blank" href="https://github.com/Matheuslpss"><i class='bx bxl-github'></i></a>
+            </div>  
             </section>
-            <img src="images/foto pessoal.webp" alt="foto de perfil">
-             
-        </main>
+            <img src="images/foto pessoal.webp" alt="foto_de_perfil">
+           </main>
+        <!-- Fim pagina inicial -->
+
+        <!-- Pagina Habilidades-->
+
+
+        <h1 class="name__skill">Habilidades</h1>
+        
+        <div class="skills">  
+          <div class = "hmtl" ><img src="images/Group 1.png" alt="logo hmtl"> </div>
+          <div class="css"><img src="images/logo html.png" alt="logo css"> </div>
+          <div class="JavaScript"><img src="images/javascript.png" alt="logo javascript"> </div>
+          <div class="figma"><img src="images/figma.png" alt="logo figma"> 
+        </div>
+
+      <!--fim pagina habilidades --> 
+
+      <!-- inicio pagina projetos -->
+      <!-- fim pagina projetos -->
+
+        <!-- Pagina contato -->
+        <footer class="contato">
+          <h1 class="name__contact">Contato</h1>
+          <div class="contato__formulario">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+          </div>
+        </footer>
+        <!-- Fim pagina contato -->
+         <script> </script>
     </body>
 </html>
