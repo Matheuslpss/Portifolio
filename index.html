@@ -24,7 +24,7 @@
         <main class="apresentacao">
             <section class="apresentacao__coteudo">
               <h1 class="apresentacao__conteudo__titulo">Ola, eu sou <strong>Matheus Lopes</strong> </h1>
-              <h2 class="apresentacao__conteudo__subtitulo">e eu sou um <strong>Desenvolvedor de Front-End</strong> </h2>
+              <h2 class="apresentacao__conteudo__subtitulo"> e eu sou um <span class="text__animation"><span id="typing"></span></span></h2>
               <P class="apresentacao__conteudo__texto">Tenho foco em transformar ideias e designs em 
                 experiências digitais modernas, intuitivas e responsivas. Utilizo HTML, CSS e JavaScript 
                 para dar vida a projetos únicos e funcionais. </P>
@@ -43,7 +43,7 @@
         <h1 class="name__skill">Habilidades</h1>
         
         <div class="skills">  
-          <div class = "hmtl" ><img src="images/Group 1.png" alt="logo hmtl"> </div>
+          <div class = "hmtl" ><img src="images/Frame 1.png" alt="logo hmtl"> </div>
           <div class="css"><img src="images/logo html.png" alt="logo css"> </div>
           <div class="JavaScript"><img src="images/javascript.png" alt="logo javascript"> </div>
           <div class="figma"><img src="images/figma.png" alt="logo figma"> 
@@ -58,13 +58,49 @@
         <footer class="contato">
           <h1 class="name__contact">Contato</h1>
           <div class="contato__formulario">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="text" name="nome" placeholder="Seu Nome" required> 
             <input type="email" name="email" placeholder="Seu Email" required>
             <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
             <button type="submit">Enviar</button>
           </div>
         </footer>
         <!-- Fim pagina contato -->
-         <script> </script>
+         <script>
+const words = ["Desenvolvedor de Front-End", "Desenvolvedor Web"];
+let i = 0;
+let timer;
+let isDeleting = false;
+let txt = '';
+let wordIndex = 0;
+
+function typeWriter() {
+  const current = wordIndex % words.length;
+  const fullTxt = words[current];
+
+  if (isDeleting) {
+    txt = fullTxt.substring(0, txt.length - 1);
+  } else {
+    txt = fullTxt.substring(0, txt.length + 1);
+  }
+
+  document.getElementById('typing').textContent = txt;
+
+  let typeSpeed = 120;
+  if (isDeleting) { typeSpeed /= 2; }
+
+  if (!isDeleting && txt === fullTxt) {
+    typeSpeed = 1200;
+    isDeleting = true;
+  } else if (isDeleting && txt === '') {
+    isDeleting = false;
+    wordIndex++;
+    typeSpeed = 500;
+  }
+
+  timer = setTimeout(typeWriter, typeSpeed);
+}
+
+typeWriter();
+</script>
     </body>
 </html>
