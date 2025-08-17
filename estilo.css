@@ -14,10 +14,9 @@
   --text-color: #ffffff; /* branco */
 /* } 0c0c1b 0a0a14 */
 }
-body {
-  height: 100vh;
+.pag__inicio {
   background-color: var(--bg-color);
-  color: white;
+  color: var(--text-color);
   overflow-x: hidden; /* opcional, evita scroll horizontal */
 }
   /* inicio da pagina */
@@ -141,6 +140,7 @@ body {
 }
 
 .foto_de_perfil {
+  border: 4px;
   border-radius: 50%;
   width: 300px;      /* ajuste conforme necessário */
   height: 300px;     /* ajuste conforme necessário */
@@ -170,6 +170,11 @@ body {
 /* fim pagina inicio */
 
 /* inicio da pagina habilidades */
+#habilidades{
+  background-color:#090914;
+  color: var(--text-color);  
+}
+
 .name__skill{
 margin-bottom: 50px;
 text-align: center;
@@ -183,12 +188,13 @@ font-family: "Ubuntu",sans-serif ;
   display: flex;
   flex-direction: column;
   width:600px;
-  
   margin: auto;
 }
  .skills div{
     display: flex;
     height: 200px;
+    
+   
   }
 
   .skills img{
@@ -217,6 +223,24 @@ font-family: "Ubuntu",sans-serif ;
 
 /* inicio da pagina contato */
 
+.contato{
+/* margin-top:50%; */
+background-color: var(--bg-color);
+color: var(--text-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative
+}
+.contato__conteudo{
+  position: absolute
+  top: 50%;
+  transform: translateY(-50%);
+
+
+
+}
+
 .name__contact {
   text-align: center;
   color: var(--text-color);
@@ -227,8 +251,10 @@ font-family: "Ubuntu",sans-serif ;
 }
 .contato__formulario {
   display: flex;
+  min-height: 90vh;
+  padding: 50px 0;
   flex-direction: column;
-  row-gap: 15px
+  row-gap: 15px;
   
 }
 
