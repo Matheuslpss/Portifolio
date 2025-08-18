@@ -17,7 +17,7 @@
                     <li class="cabecalho__menu__item"><a href="#home">Inicio</a></li>
                     <li class="cabecalho__menu__item"><a href="#habilidades">Habilidades</a></li>
                     <li class="cabecalho__menu__item"><a href="#project">Projetos</a></li>
-                    <li class="cabecalho__menu__item"><a href="#contacts ">Contato</a></li>
+                    <li class="cabecalho__menu__item"><a href="#contato ">Contato</a></li>
                 </ul>
                
             </nav>
@@ -45,7 +45,7 @@
         <h1 class="name__skill">Habilidades</h1>
         
         <div class="skills">  
-          <div class = "hmtl" ><img src="images/Frame 1.png" alt="logo hmtl"> </div>
+          <div class = "hmtl" ><img src="images/html.png" alt="logo html"> </div>
           <div class="css"><img src="images/css.png" alt="logo css"> </div>
           <div class="JavaScript"><img src="images/javascript.png" alt="logo javascript"> </div>
           <div class="figma"><img src="images/figma.png" alt="logo figma"> </div>
@@ -57,6 +57,7 @@
       <!-- fim pagina projetos -->
 
         <!-- Pagina contato -->
+      <div id="contato">
       <footer class="contato">
         <div class="contato__conteudo">
         <h1 class="name__contact">Contato</h1>
@@ -68,43 +69,51 @@
         </div>
         </div>
       </footer>
+      </div>
+
+      <div class="botao__topo"><img src="images/botao.png" alt="botao de voltar ao topo"/> </div>
+
         <!-- Fim pagina contato -->
-         <script>
-const words = ["Desenvolvedor de Front-End", "Desenvolvedor Web"];
-let i = 0;
-let timer;
-let isDeleting = false;
-let txt = '';
-let wordIndex = 0;
 
-function typeWriter() {
-  const current = wordIndex % words.length;
-  const fullTxt = words[current];
+<script>
 
-  if (isDeleting) {
-    txt = fullTxt.substring(0, txt.length - 1);
-  } else {
-    txt = fullTxt.substring(0, txt.length + 1);
-  }
+    const words = ["Desenvolvedor de Front-End", "Desenvolvedor Web"];
+    let i = 0;
+    let timer;
+    let isDeleting = false;
+    let txt = '';
+    let wordIndex = 0;
 
-  document.getElementById('typing').textContent = txt;
+    function typeWriter() {
+      const current = wordIndex % words.length;
+      const fullTxt = words[current];
 
-  let typeSpeed = 120;
-  if (isDeleting) { typeSpeed /= 2; }
+      if (isDeleting) {
+        txt = fullTxt.substring(0, txt.length - 1);
+      } else {
+        txt = fullTxt.substring(0, txt.length + 1);
+      }
 
-  if (!isDeleting && txt === fullTxt) {
-    typeSpeed = 1200;
-    isDeleting = true;
-  } else if (isDeleting && txt === '') {
-    isDeleting = false;
-    wordIndex++;
-    typeSpeed = 500;
-  }
+      document.getElementById('typing').textContent = txt;
 
-  timer = setTimeout(typeWriter, typeSpeed);
-}
+      let typeSpeed = 120;
+      if (isDeleting) { typeSpeed /= 2; }
 
-typeWriter();
+      if (!isDeleting && txt === fullTxt) {
+        typeSpeed = 1200;
+        isDeleting = true;
+      } else if (isDeleting && txt === '') {
+        isDeleting = false;
+        wordIndex++;
+        typeSpeed = 500;
+      }
+
+      timer = setTimeout(typeWriter, typeSpeed);
+    }
+      typeWriter();
+
+ 
+
 </script>
     </body>
 </html>
