@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portifolio</title>
         <link rel="stylesheet" href="estilo.css">
-         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>    
             <!-- Pagina inicial -->
@@ -71,10 +72,11 @@
       </footer>
       </div>
 
-      <div class="botao__topo"><img src="images/botao.png" alt="botao de voltar ao topo"/> </div>
-
-        <!-- Fim pagina contato -->
-
+       <!-- Fim pagina contato -->
+        
+      <a class="botao__topo" onclick="up()">
+        <i class="material-icons">expand_less</i>
+      </a> 
 <script>
 
     const words = ["Desenvolvedor de Front-End", "Desenvolvedor Web"];
@@ -112,7 +114,23 @@
     }
       typeWriter();
 
- 
+   function up() {
+        document.documentElement.scrollTop = 0;
+      }
+
+      function scroll() {
+        const botao_topo = document.querySelector('.botao__topo');
+
+        if (document.documentElement.scrollTop >= 480) {
+          botao_topo.style.display = 'block';
+        } else {
+          botao_topo.style.display = 'none';
+        }
+      }
+
+      window.onscroll = function() {
+        scroll();
+      }
 
 </script>
     </body>

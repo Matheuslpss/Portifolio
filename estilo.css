@@ -19,13 +19,27 @@ html{
 }
 
 .botao__topo{
-  img{position:absolute;
-    transform: translate(500%, 50%);
-  
-  
-}
-}
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 3%;
+  bottom: 10%;
+  display: none;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  background-color: #2e2e2e;
+  color: var(--main-color);
+  box-shadow: 0 0 12px 0 var(--main-color);
+  cursor: pointer;
 
+  i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+  
 .pag__inicio {
   background-color: var(--bg-color);
   color: var(--text-color);
